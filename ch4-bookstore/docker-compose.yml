@@ -9,6 +9,9 @@ services:
       - .:/django_for_professionals
     depends_on:
       - db
+    environment:
+      - "DJANGO_SECRET_KEY=django-insecure-!7lpu%*jfd##sniw6ec(ijwhu#%aflql)#u0!(jtk3$7ld=_-o"
+      - "DJANGO_DEBUG=True"
   db:
     image: postgres:13
     volumes:
