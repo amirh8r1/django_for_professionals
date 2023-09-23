@@ -5,5 +5,7 @@
 
 {% block content %}
     <h1>This is our home page. ^_^</h1>
-    <img class="bookcover" src="{% static 'images/dfp.jpg' %}">
+    {% if user.is_authenticated %}
+        <p>Hi {{ user.email }}!</p>
+    {% endif %}
 {% endblock content %}
